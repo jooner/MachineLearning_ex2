@@ -17,7 +17,7 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
     fprintf('%d\n %d\n %d\n DONE \n',size(theta), size((theta' .* X - y)), size(X));
-    theta = theta - alpha / m * sum((theta' .* X - y)) * X;
+    theta = theta - alpha / m * sum((theta' .* X - y) * X(2));
     fprintf('theta 1 : %f. theta 2 : %f \n', theta(1), theta(2));
     fprintf('cost is: %f \n', computeCost(X, y, theta));
 

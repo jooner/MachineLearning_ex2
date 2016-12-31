@@ -10,7 +10,11 @@ A = [];
 %               and then set them accordingly. 
 
 
+<<<<<<< HEAD
 A = eye(5)
+=======
+A = eye(5);
+>>>>>>> origin/master
 
 
 

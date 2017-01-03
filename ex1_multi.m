@@ -97,12 +97,11 @@ theta3 = zeros(3, 1);
 
 % Plot the convergence graph
 figure;
-plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
+%plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
 hold on;
 plot(1:numel(J_history2), J_history2, '-r', 'LineWidth', 1);
 hold on;
 plot(1:numel(J_history3), J_history3, '-k', 'LineWidth', 3);
-axis([0 200 0 5*10^9])
 xlabel('Number of iterations');
 ylabel('Cost J');
 

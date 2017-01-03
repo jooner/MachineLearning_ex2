@@ -83,9 +83,9 @@ fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
 alpha = 0.1;
-alpha2 = 0.5;
-alpha3 = 0.03;
-num_iters = 100;
+alpha2 = 0.03;
+alpha3 = 0.01;
+num_iters = 200;
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(3, 1);
@@ -102,6 +102,7 @@ hold on;
 plot(1:numel(J_history2), J_history2, '-r', 'LineWidth', 1);
 hold on;
 plot(1:numel(J_history3), J_history3, '-k', 'LineWidth', 3);
+axis([0 200 0 5*10^9])
 xlabel('Number of iterations');
 ylabel('Cost J');
 

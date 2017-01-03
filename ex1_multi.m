@@ -107,7 +107,7 @@ ylabel('Cost J');
 
 % Display gradient descent's result
 fprintf('Theta computed from gradient descent: \n');
-fprintf(' theta: %f \n theta2: %f \n theta3: %f \n', theta, theta2, theta3);
+fprintf('%f \n %f \n %f \n', theta, theta2, theta3);
 fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
@@ -160,7 +160,7 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-X_test = [1 1650 3]
+X_test = [1 1650 3];
 price = X_test * theta; % You should change this
 
 

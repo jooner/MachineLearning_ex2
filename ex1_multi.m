@@ -97,17 +97,17 @@ theta3 = zeros(3, 1);
 
 % Plot the convergence graph
 figure;
-%plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
+%plot(1:numel(J_history), J_history, '-b', 'LineWidth', 1);
 hold on;
 plot(1:numel(J_history2), J_history2, '-r', 'LineWidth', 1);
 hold on;
-plot(1:numel(J_history3), J_history3, '-k', 'LineWidth', 3);
+plot(1:numel(J_history3), J_history3, '-k', 'LineWidth', 1);
 xlabel('Number of iterations');
 ylabel('Cost J');
 
 % Display gradient descent's result
 fprintf('Theta computed from gradient descent: \n');
-fprintf(' %f \n %f \n %f \n', theta, theta2, theta3);
+fprintf(' theta:\n %f \n theta2:\n %f \n theta3:\n %f \n', theta, theta2, theta3);
 fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house

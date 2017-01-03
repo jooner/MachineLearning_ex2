@@ -82,13 +82,15 @@ X = [ones(m, 1) X];
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
-alpha = 0.3;
-alpha2 = 0.1;
-alpha3 = 0.03;
-num_iters = 50;
+alpha = 0.1;
+alpha2 = 0.03;
+alpha3 = 0.01;
+num_iters = 100;
 
 % Init Theta and Run Gradient Descent 
-% theta = zeros(3, 1);
+theta = zeros(3, 1);
+theta2 = zeros(3, 1);
+theta3 = zeros(3, 1);
 [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
 [theta2, J_history2] = gradientDescentMulti(X, y, theta, alpha2, num_iters);
 [theta3, J_history3] = gradientDescentMulti(X, y, theta, alpha3, num_iters);
@@ -98,13 +100,14 @@ figure;
 plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
 hold on;
 plot(1:numel(J_history2), J_history2, '-r', 'LineWidth', 2);
+hold on;
 plot(1:numel(J_history3), J_history3, '-k', 'LineWidth', 2);
 xlabel('Number of iterations');
 ylabel('Cost J');
 
 % Display gradient descent's result
 fprintf('Theta computed from gradient descent: \n');
-fprintf(' %f \n', theta);
+fprintf(' %f \n %f \n %f \n', theta, theta2, theta3);
 fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house

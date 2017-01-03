@@ -107,17 +107,17 @@ ylabel('Cost J');
 
 % Display gradient descent's result
 fprintf('Theta computed from gradient descent: \n');
-fprintf(' theta:\n %f \n theta2:\n %f \n theta3:\n %f \n', theta, theta2, theta3);
+fprintf(' theta: %f \n theta2: %f \n theta3: %f \n', theta, theta2, theta3);
 fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = 0; % You should change this
-X_test = [1 1650 3];
-X_test = (X .- mu) ./ sigma;
-price = theta3 * X_test;
+X_test = [1650 3];
+X_test = (X_test .- mu) ./ sigma;
+X_test = [1 X_test];
+price = X_test * theta3;
 % ============================================================
 
 fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
@@ -160,7 +160,8 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
+X_test = [1 1650 3]
+price = X_test * theta; % You should change this
 
 
 % ============================================================
